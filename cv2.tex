@@ -1,0 +1,319 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+%\usepackage{CJK}
+\usepackage{hyperref}
+\usepackage{url}
+%\usepackage{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[shortlabels]{enumitem}
+\usepackage{etaremune}
+
+%\usepackage{xeCJK}
+%\setCJKmainfont{Heiti TC}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.3in
+%\topmargin=-0.3in
+%\textheight=9.25in
+\textheight=9.35in
+
+\raggedright
+
+%\pagenumbering{empty}
+\pagenumbering{gobble}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\large{\bf \scshape{#1}}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[1]{
+
+        \begin{center}
+            {\Large {#1}}\\ \smallskip
+        \end{center}
+
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+\newenvironment{mypara}[1]%
+ {\begin{list}{}%
+         {\setlength{\leftmargin}{#1}}%
+         \item[]%
+ }
+ {\end{list}}
+
+
+% END RESUME DEFINITIONS
+
+\def\parsedate #1:20#2#3#4#5#6#7#8\empty{20#2#3/#4#5/#6#7}
+\def\moddate#1{\expandafter\parsedate\pdffilemoddate{#1}\empty}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{ \LARGE \bf Yang-Ge Ma}
+\begin{changemargin}{-0.5in}{-0.5in}
+Address: 15F., No. 287, Mingfeng St., Xizhi Dist., New Taipei City 221, Taiwan (R.O.C.) \hfill {DoB: 18 Jun 1997}\\
+Email:\href{mailto:bu2014bug@gmail.com}{\url{bu2014bug@gmail.com}} \hfill {Mobile Number: +886-908-350911} \\
+Github: \href{https://github.com/yangerma}{\url{https://github.com/yangerma}}
+
+
+%{Last Updated: \moddate{CV.tex}}
+\end{changemargin}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=0pt,partopsep=0pt,
+        topsep=0pt}
+
+\newenvironment{bibenum*}
+  {\renewcommand\labelenumi{[\theenumi]}%
+   \etaremune}
+  {\endetaremune}
+
+\makeatother
+
+%{ Room 302, CSIE Building, \#1 Roosevelt Rd. Sec. 4, Taipei 106, Taiwan}{886-952-714-902(mobile)  }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+%\header{Objective}
+%
+%\begin{body}
+%	\vspace{14pt}
+%	To get a job
+%\end{body}
+%
+%\smallskip
+
+\smallskip 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+
+	\textbf{National Taiwan University}, Taipei, Taiwan	\hfill \emph{September 2015 - present }\\
+	{--- B.S. of Computer Science and Information Engineering (CSIE)}, minoring in Mathematics\\
+	\hspace{12pt} - Expected to graduate in June 2019\\
+    \hspace{12pt} - GPA: 3.76/4.30 \\
+    \hspace{12pt} - Two-year participation ($2^{nd}$ and $4^{th}$ year) in ACM-ICPC programming contests\\
+	\hspace{12pt} - Selected Courses (where I got A or above): Data Structure and Algorithms, Algorithm Design and Analysis, System
+	Programming, Introduction to Mathematical Analysis, Introduction to Mathematical Logic \\
+	
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Working Experience
+\header{Working Experiences}
+
+\begin{body}
+	\vspace{14pt}
+
+	\textbf {Software Engineer Summer Intern}, \emph{Taipei, Taiwan} \hfill \emph{Summer 2017}\\
+	\hspace{12pt} - Working at RD-ME team.\\
+	\hspace{12pt} - Updating the auto-testing script for ActionDirector, a light-weighted version of PowerDirector
+	\smallskip
+	
+	\textbf {Research Assistant}, \emph{Taipei, Taiwan} \hfill \emph{Fall 2017 - present}\\
+	\hspace{12pt} - Currently working on first order logic with two variables (FO-2)\\
+	\hspace{12pt} - Advisor: Prof. Tony Tan
+	\smallskip
+	
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Teaching Experience
+\header{Teaching Experiences}
+
+\begin{body}
+	\vspace{14pt}
+
+	\textbf {Teaching Assistant}, {\textit{Data Structures and Algorithms}}, \emph{CSIE, NTU} \hfill \emph{Spring 2018 \& Spring 2019}\\
+	\hspace{12pt} - Responsible for setting programming homework\\
+	\hspace{12pt} - Offering weekly TA hours for helping and discussing with students\\
+	\hspace{12pt} - Building and maintaining the course's online judge system\\
+	\hspace{12pt} - Instructor: Prof. Hsin-Mu Tsai\\
+	\smallskip
+	
+	\textbf {Lecturer}, {\textit{IOI Program}}, \emph{KCIS} \hfill \emph{Fall 2017 - Present}\\
+	\hspace{12pt} - A program that prepares high school students for various programming contests\\
+	\hspace{12pt} - Teaching basic C++ programming and algorithms\\
+	\hspace{12pt} - Assigning homework to students every week\\
+	\smallskip
+
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Student Affairs
+\header{Student Group Experiences}
+
+\begin{body}
+	\vspace{14pt}
+
+	\textbf {Minister}, \textit{Academic Department}, \emph{CSIE Council} \hfill \emph{Fall 2017 - Spring 2018}\\
+	    \hspace{12pt} - Leading a department of about 10 people\\
+	    \hspace{12pt} - Responsible for annual activities including freshmen-cup programming contest, freshmen academic camp\\
+	    \hspace{12pt} - Publishing special research introduction, according to our interviews to professors\\
+	\smallskip
+	
+\end{body}
+
+\smallskip
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Course Projects
+\header{Course Projects}
+
+\begin{body}
+	\vspace{14pt}
+
+	\textbf {Einstein Chess AI}, \textit{Homework 2 of Theory of Computer Gaming} \hfill \emph{Fall 2018}\\
+	\smallskip
+        \hspace{12pt} - Language: C++\\
+	    \hspace{12pt} - Designing a Einstein Chess AI based on Monte-Carlo Tree Searching Algorithm \\
+	    \hspace{12pt} - Having a winning rate of over 80\% against a pretty good greedy strategy \\
+	\smallskip
+
+	
+	\textbf {Sokuban Solver}, \textit{Homework 1 of Theory of Computer Gaming} \hfill \emph{Fall 2018}\\
+	\smallskip
+        \hspace{12pt} - Language: C++\\
+		\hspace{12pt} - Designing a Sokuban solver based on various searching algorithms, including BFS, A*, etc.\\
+		\hspace{12pt} - Able to solve most Sokuban puzzle of size 50 within 30 seconds
+	\smallskip
+	
+	
+\end{body}
+
+
+\if 0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Algorithmic Problem Solving
+\header{Algorithmic Problem Solving}
+
+\begin{body}
+
+	\vspace{14pt}
+	\textbf{Codeforces} \\
+    \begin{itemize}[*]
+			\item Rating 2018 (Candidate Master)
+			\item \href{http://codeforces.com/profile/ppetter1025}{\url{http://codeforces.com/profile/ppetter1025}}
+    \end{itemize}
+	
+
+\end{body}
+
+\smallskip
+\fi
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{Awards and Honors}
+
+\begin{body}
+
+	\vspace{14pt}
+        - \textbf{3rd place} out of 125, ACM ICPC Asia Hanoi Regional, Vietnam \hfill \emph{2018}\\
+        - \textbf{1st place} out of 88, ACM ICPC Asia Taiwan Online Programming Contest, Taiwan \hfill \emph{2018}\\
+        - \textbf{5th place} out of 83, ACM ICPC Asia Daejeon Regional, Korea \hfill \emph{2016}\\
+        - \textbf{700th place} out of 3000, Google Code Jam Round 2 \hfill \emph{2016}\\
+	\smallskip		   	
+	
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proficient Skills
+\header{Skills}
+
+\begin{body}
+	\vspace{14pt}
+		- \textbf{Programming Languages:} C/C++, Python, Java, Shellscript \\
+		- \textbf{Operating Systems:} Windows, Linux\\
+		- \textbf{Others:} algorithmic problem solving, mathematics\\
+\end{body}
+
+\smallskip
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Extracurricular Activities
+\header{Extracurricular}
+
+\begin{body}
+    \vspace{14pt}
+        - Arranged academic affairs in the 2018 CSIE Summer Camp for high school students.\\
+		- Participated in the NTU Fire Dance Club in my senior year in college.\\
+    	- Participated in the CSIE badminton team for 4 years.\\
+	\smallskip		 	   	
+	
+\end{body}
+
+\end{document}
+
